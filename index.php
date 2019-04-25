@@ -5,6 +5,6 @@ if (!$link) {
 }
 echo 'Connected successfully';
 mysql_close($link);
-echo "<br>EDSI5";
+echo "<br>EDSI6";
 ?>
 
