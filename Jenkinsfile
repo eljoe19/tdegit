@@ -11,5 +11,10 @@ pipeline{
 			 sh 'sudo docker ps'
 			}
 		}
+		stage('Build Image'){
+			steps{
+			
+			}
+		}
 	}
 }
