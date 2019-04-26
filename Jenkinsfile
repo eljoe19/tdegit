@@ -14,8 +14,8 @@ pipeline{
 		stage('Build Image'){
 			steps{
 			 sh 'sudo docker build --tag=imgphpjen .'
-			 sh 'sudo docker cp index.php imgphpjen:/var/www/html/index.php'	
-			 sh 'sudo docker cp db.php imgphpjen:/var/www/html/db.php'
+			 sh 'sudo docker cp index.php imgphpjen:/var/www/html/'	
+			 sh 'sudo docker cp db.php imgphpjen:/var/www/html/'
 			}
 		}
 		stage('Run Composer'){
