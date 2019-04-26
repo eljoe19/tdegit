@@ -14,7 +14,6 @@ pipeline{
 		stage('Build Image'){
 			steps{
 			 sh 'sudo docker build --tag=imgphpjen .'
-			 sh 'sudo docker cp . imgphpjen:/var/www/html'	
 			}
 		}
 		stage('Run Composer'){
