@@ -1,4 +1,8 @@
 pipeline{
+	environment{
+		registry="eljoe\tde"
+		registryCredential="dockerhub"
+	}
 	agent any
 	stages{
 		stage('Starting'){
@@ -13,12 +17,9 @@ pipeline{
 		}
 		stage('Build Image'){
 			steps{
-			 sh 'sudo docker build --tag=imgphpjen .'
-			}
-		}
-		stage('Run Composer'){
-			steps{
-			sh 'sudo docker-compose up -d' 
+				script{
+					dockerImage=docker.build registry + ":$BUIL_NUMBER"
+				}
 			}
 		}
 	}
