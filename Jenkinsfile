@@ -16,5 +16,10 @@ pipeline{
 			 sh 'sudo docker build --tag=imgphpjen .'	
 			}
 		}
+		stage('Run Composer'){
+			steps{
+			sh 'sudo docker-compose up -d' 
+			}
+		}
 	}
 }
